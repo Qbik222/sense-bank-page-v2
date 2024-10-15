@@ -1,31 +1,202 @@
-.land
-    .land__logo
-        img(src="./img/logo.png" alt="favbet")
-    //.land__left
-    //    .land__title До нових висот з бонусом*
-    //    .land__prize 15 000₴
-    //    .land__spins + 300 фрiспiнiв
-    //    .land__btn хапай штурвал
-    //.land__right
-    //    .land__right-pers
-    //        img(src="./img/pers.png" alt="favbet")
-    //    .land__right-plane
-    //        img(src="./img/plane.png" alt="favbet")
-.footer
-    .footer__text  ТОВ «БУКМЕКЕРСЬКА КОМПАНІЯ «ФАВБЕТ». Ліцензія на провадження діяльності з організації та проведення букмекерської діяльності від 28.12.2022, видана згідно з рішенням КРАІЛ № 433 від 13.12.2022 та Ліцензія на провадження діяльності з організації та проведення азартних ігор казино в мережі Інтернет від 20.04.2021, видана згідно з рішенням КРАІЛ № 137 від 05.04.2021, зі змінами.
-    .footer__wrap
-        ul.footer__licensed
-            li.footer__licensed-item
-                img(src="./img/age.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/applePay.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/googlePay.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/visa.svg" alt="favbet")
-            li.footer__licensed-item
-                img(src="./img/mastercard.svg" alt="favbet")
-        .footer__btns
-            a(href="https://apps.apple.com/ua/app/favbet-ua/id1580749519" target="_blank").footer__appstore
-            a(href="https://favbet.ua/minio/android-files/FavbetUA.apk" target="_blank").footer__googlePlay
-.legal УЧАСТЬ В АЗАРТНИХ ІГРАХ МОЖЕ ВИКЛИКАТИ ІГРОВУ ЗАЛЕЖНІСТЬ. ДОТРИМУЙТЕСЯ ПРАВИЛ (ПРИНЦИПІВ) ВІДПОВІДАЛЬНОЇ ГРИ
+.fav-page
+    .promo
+        .container
+            .promo__left
+                .promo__title Грай, <br> як #[span.magenta профі]
+                .promo__subtitle З карткою карткою "Profiplay" та фріспінами від FAVBET
+                .promo__card
+                    picture
+                        source(srcset="./img/promo/card-mob.png" media="(max-width: 600px)")
+                        source(srcset="./img/promo/card-tab.png" media="(max-width: 1050px)")
+                        img(src="./img/promo/card-desc.png" alt="profiplay")
+                a(href="/personal-office/balance/deposit/").promo__btn.btn ЗРОБИТИ ДЕПОЗИТ
+                .promo__bottom
+                    span.promo__bottom-item Загальний період проведення акції — з  21.10.2024 по 15.12.2024.
+                    span.promo__bottom-item Загальний призовий фонд акції, вид та розмір бонусної пропозиції встановлюється виключно на розсуд Організатора
+            .promo__right
+                .promo__pers
+                    picture
+                        source(srcset="./img/promo/pers-tab.png" media="(max-width: 1050px)")
+                        img(src="./img/promo/pers-desc.png" alt="profiplay")
+                .promo__bike
+                    picture
+                        source(srcset="./img/promo/bike-tab.png" media="(max-width: 1050px)")
+                        img(src="./img/promo/bike-desc.png" alt="profiplay")
+    .guide
+        .container
+            .guide__title Як отримати бонус у вигляді  #[span.magenta фріспінів?]
+            .guide__list
+                .guide__item
+                    .guide__item-num 1
+                    .guide__item-text #[span.green-txt РОБИ] депозит від 150₴ з платіжної картки #[strong «Profiplay»]
+                .guide__item
+                    .guide__item-num 2
+                    .guide__item-text Щотижня #[span.green-txt Отримуй] шанс на бонус у вигляді фріспінів: від 50 FS до 150 FS, залежно від суми здійсненого депозиту.
+    .prize
+        .container
+            .prize__title призи
+            .prize__subtitle Бонус залежить від суми твого найбільшого депозиту впродовж тижня.
+            .prize__list
+                .prize__item
+                    .prize__item-img
+                        img(src="./img/prize/prize1.png" alt="prize box")
+                    .prize__item-title 50 fs
+                    .prize__item-text ₴150 - ₴249
+                .prize__item
+                    .prize__item-img
+                        img(src="./img/prize/prize2.png" alt="prize box")
+                    .prize__item-title 100 fs
+                    .prize__item-text ₴250 - ₴599
+                .prize__item
+                    .prize__item-img
+                        img(src="./img/prize/prize3.png" alt="prize box")
+                    .prize__item-title 150 fs
+                    .prize__item-text ₴600 та більше
+            details.dropdown
+                summary(data-translate="prizeDropBtn") розподіл призів
+                .drop-txt
+                    .drop-txt-list(data-translate="prizeDrop")
+                        p #[span.list-num 1] Роби депозит від 150₴  виключно з цифрової картки «Profiplay»
+                        p #[span.list-num 2] Після здійснення  депозиту з вищезазначеної картки, автоматично отримуй право на бонус у вигляді FS у грі “------------” від Провайдера —--------, що нараховується з вейджером 150₴ за депозит в діапазоні 150 ₴ -249₴, з вейджером  250 ₴ за депозит в діапазоні 250 ₴- 599₴, з вейджером 600₴ за депозит в діапазоні 600₴ і більше., тож для його отримання необхідно зробити ставки у розділі “Казино” на суму від 150₴.
+                        .drop__list
+                            .list-box
+                            .drop__list-item Розприділення суми бонусу, відповідно до депозиту:
+                            .drop__list-item 150 ₴ -249₴: #[span.magenta  50 FS]
+                            .drop__list-item 250 ₴ - 599₴: #[span.magenta  100 FS]
+                            .drop__list-item 600₴ і більше: #[span.magenta  150 FS]
+    .info
+        .container
+            .info__buble
+                .info__buble-title Граю-вітаю. Коли ти у грі, усе має бути ідеально, навіть платіжна карта. <br> Завантажуй карту "Profiplay".
+                .info__buble-pers
+            .info__title Profiplay - унікальнка картка, що повертає 3% кешбеку від цифрових розваг
+            .info__text
+                .info__text-item Безкоштовні перекази на картки інших банків до_20_000 гривень на місяць.
+                .info__text-item Зняття коштів без комісії в будь-якому банкоматі світу та багато іншого.
+    .card
+        .container
+            .card__phone
+                .card__phone-title Отримай карту в мобільному застосунку
+                .card__phone-img-decor
+                .card__phone-link-decor
+                .card__phone-img
+                    picture
+                        source(srcset="./img/card/card-mob.png" media="(max-width: 600px)")
+                        img(src="./img/card/card-desc.png" alt="profiplay")
+                a(href="https://hi.sensebank.com.ua/atgQRTqgegSm8yiB7" target="_blank").card__phone-link #[span.card__phone-link-btn За картою]
+                .card__phone-bottom Скануй та оформлюй картку
+                .card__phone-bottom.text-mob Натискай кнопку та <br> оформлюй картку
+                a(href="https://sensebank.ua/packages/profiplay" target="_blank").card__bottom Дізнайся більше <br> про карту Profiplay
+            .card__pers
+                .card__title Нема картки #[span.magenta Profiplay?]
+                picture
+                    source(srcset="./img/card/pers-mob.png" media="(max-width: 600px)")
+                    source(srcset="./img/card/pers-tab.png" media="(max-width: 1050px)")
+                    img(src="./img/card/pers-desc.png" alt="profiplay")
+    .table
+        .table__container.container
+            .table__title Таблиця результатів #[span.magenta “Фріспіни за депозит”]
+            .table__subtitle Нарахування здійснюються щосереди за минулий тиждень
+            .table__wrap
+                .table__scrollbar
+                    .table__scrollbar-thumb
+                .table__head
+                    .table__head-item(data-translate="tableId") id гравця
+                    .table__head-item(data-translate="tableDeposit") Сума депозиту для нарахування призу
+                    .table__head-item(data-translate="tableFs") Фріспіни
+                    .table__head-item(data-translate="tableDate") Дата нарахування
+                .table__body
+                    .table__body-scroll
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 250 ₴ - 599₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 600₴ та більше
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+                        .table__row
+                            .table__row-item 567898765
+                            .table__row-item 150 ₴ - 250₴
+                            .table__row-item 2250
+                            .table__row-item 23.11.2024
+            a(href="/personal-office/balance/deposit/").table__btn.btn зробити депозит
+    .drop
+        .container
+            details.dropdown
+                summary(data-translate="rulesTitle") Розподіл призів
+                .drop-txt
+                    .drop-txt-list(data-translate="rulesTxt")
+                        p #[span.list-num 1] Роби депозит від 150₴  виключно з цифрової картки «Profiplay»
+                        p #[span.list-num 2] Після здійснення  депозиту з вищезазначеної картки, автоматично отримуй право на бонус у вигляді FS у грі “------------” від Провайдера —--------, що нараховується з вейджером 150₴ за депозит в діапазоні 150 ₴ -249₴, з вейджером  250 ₴ за депозит в діапазоні 250 ₴- 599₴, з вейджером 600₴ за депозит в діапазоні 600₴ і більше., тож для його отримання необхідно зробити ставки у розділі “Казино” на суму від 150₴.
+                        .drop__list
+                            .list-box
+                            .drop__list-item Розприділення суми бонусу, відповідно до депозиту:
+                            .drop__list-item 150 ₴ -249₴: #[span.magenta  50 FS]
+                            .drop__list-item 250 ₴ - 599₴: #[span.magenta  100 FS]
+                            .drop__list-item 600₴ і більше: #[span.magenta  150 FS]

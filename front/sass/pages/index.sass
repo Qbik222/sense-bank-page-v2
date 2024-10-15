@@ -1,67 +1,949 @@
 $blue: #000055
+$dark-blue: #00003d
+$light-blue: #0E3B79
 $white: #ffffff
+$grey: #E3E3E3
 $magenta: #FF267E
-$green: #3AFFC3
+$green: #05C489
+$green-hover: #3AFFC3
+$green-light: #B7FFE9
 $black: #1B1B1F
+$purple: #9FAFFF
 
 $font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
 $font-suisse-intl-bold: SuisseIntl-Bold, sans-serif
-$font-legal: DINPro-CondLight, sans-serif
-$font-riffic-bold: Riffic-Bold, sans-serif
+$font-suisse-intl-semib: SuisseIntl-SemiBold, sans-serif
+$font-robotto-cond-semib: RobotoCondensed-SemiBold, sans-serif
+$font-suisse-intl-med: SuisseIntl-Medium, sans-serif
+
 
 body
   overscroll-behavior: none
+  -webkit-tap-highlight-color: transparent
+  background: $dark-blue
+  overflow-x: hidden
   img
     max-width: 100%
     height: auto
-.land
-  height: calc(100% - 83px)
-  position: relative
-  &__logo
-    position: absolute
-    top: 0
-    left: 0
-    max-width: 300px
-.footer
-  background: $blue
-  height: 83px
+
+.body.light
+  background: $dark-blue
+
+.fav-page
+  background: $dark-blue
+  overflow: hidden
   display: flex
-  padding: 5px 20px 5px 35px
+  flex-direction: column
   align-items: center
-  justify-content: space-between
+
+.magenta
+  color: $magenta
+
+.btn
+  color: $blue
+  text-transform: uppercase
+  font-size: 22px
+  letter-spacing: .08em
+  font-family: $font-suisse-intl-semib
+  background: $green
+  display: inline-block
+  padding:  24px 58px 22px 58px
+  border-radius: 4px
+  box-shadow: 0px 0px 18.617px 0px $green
+  transition: all .5s ease-in-out
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 18.617px 0px $green-hover
+    background: $green-hover
+
+.container
+  max-width: 1250px
+  width: 100%
+  margin: 0 auto
+  display: inherit
+  align-items: inherit
+  justify-content: inherit
+  flex-direction: inherit
+
+.promo
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  padding-top: 75px
+  z-index: 1
+  position: relative
+  width: 100%
+  &::before
+    content: ""
+    display: block
+    width: 1920px
+    height: 1025px
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%, 0)
+    background: $dark-blue url("../img/promo/promo-desc.png") no-repeat 50% 100%/cover
+    z-index: 0
+  &::after
+    content: ""
+    display: block
+    width: 1625px
+    height: 350px
+    left: 50%
+    bottom: -22%
+    position: absolute
+    transform: translate(-50%, 0)
+    background: url("../img/promo/bottom-decor.png") no-repeat 50% 100%/cover
+
+  &__left
+    max-width: 540px
+    z-index: 2
+    padding-left: 50px
+  &__right
+    position: relative
+    margin: -30px 0 0 -20px
+    z-index: 1
+  &__pers
+    max-width: 440px
+    z-index: 2
+    position: relative
+  &__bike
+    width: 880px
+    position: absolute
+    z-index: 1
+    left: -85px
+    top: 50%
+    transform: translate(0, -50%)
+    //width: 1000px
+    //margin-left: -50px
+  &__title
+    color: $grey
+    font-size: 96px
+    letter-spacing: -.03em
+    line-height: 80px
+    margin: 10px 0
+    font-family: $font-suisse-intl-bold
+    text-shadow: 0px 4px 0px $light-blue
+    max-width: 420px
+  &__subtitle
+    color: $white
+    font-size: 24px
+    text-shadow: 2px 1px 2px rgba(0, 40, 96, 0.69)
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: rgba(204, 238, 255, 0.29)
+    font-family: $font-suisse-intl-semib
+    max-width: 420px
+  &__card
+    max-width: 430px
+    margin-left: -40px
+  &__btn
+    margin-left: 50px
+  &__bottom
+    display: flex
+    flex-direction: column
+    gap: 5px
+    margin-top: 35px
+    &-item
+      &:nth-child(1)
+        font-family: $font-suisse-intl-med
+        color: $grey
+        font-size: 16px
+        line-height: 16px
+      &:nth-child(2)
+        font-size: 14px
+        line-height: 14px
+        font-family: $font-suisse-intl-reg
+        color: $purple
+
+.guide
+  width: 100%
+  position: relative
+  z-index: 2
+  padding-top: 20px
+  &__title
+    color: $grey
+    font-size: 48px
+    line-height: 48px
+    font-family: $font-suisse-intl-bold
+    text-shadow: 2px 2px 0px rgba(130, 17, 63, 0.50)
+    text-transform: uppercase
+    text-align: center
+  &__list
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 40px
+    margin-top: 30px
+  &__item
+    width: 550px
+    min-height: 140px
+    border-radius: 10px
+    display: flex
+    align-items: flex-start
+    padding: 16px 23px 10px 23px
+    border-bottom: 2px solid rgba(255, 255, 255, 0.20)
+    background: radial-gradient(71.22% 59.09% at 50% -10.39%, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.00) 100%), rgba(255, 255, 255, 0.10)
+    &-num
+      color: $green
+      font-size: 64px
+      font-family: $font-suisse-intl-bold
+      text-shadow: 0px 0px 9px #15A683
+      border-radius: 12px
+      border: 3px solid $green
+      min-width: 72px
+      height: 74px
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-top: 3px
+      margin-right: 30px
+    &-text
+      display: inline-block
+      color: $grey
+      font-size: 24px
+      font-family: $font-suisse-intl-reg
+      line-height: 28px
+      letter-spacing: .02em
+      .green-txt
+        font-family: $font-suisse-intl-bold
+        color: $green
+        font-size: inherit
+        line-height: inherit
+        letter-spacing: inherit
+        text-transform: uppercase
+      strong
+        font-size: inherit
+        font-family: $font-suisse-intl-bold
+        color: inherit
+
+.prize
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 60px
+  position: relative
+  &::before
+    content: ""
+    display: block
+    width: 800px
+    height: 800px
+    position: absolute
+    left: 0
+    top: 0
+    transform: translate(-50%, 0)
+    background: url("../img/prize/decor-left.png") no-repeat 0 0/contain
+  &::after
+    content: ""
+    display: block
+    width: 592px
+    height: 592px
+    position: absolute
+    right: 0
+    top: 0
+    transform: translate(50%, 50%)
+    background: url("../img/prize/decor-right.png") no-repeat 0 0/contain
+  .container
+    position: static
+  .dropdown
+    summary
+      max-width: 800px
+      margin: 40px auto 0 auto
+      &::after
+        background: url("../img/prize/arrow.png") no-repeat 0 0/contain
+        width: 38px
+        height: 42px
+  &__title
+    color: $magenta
+    font-family: $font-suisse-intl-bold
+    font-size: 48px
+    text-shadow: 2px 2px 0px rgba(130, 17, 63, 0.50)
+    text-transform: uppercase
+    text-align: center
+  &__subtitle
+    color: $grey
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: .02em
+    font-family: $font-suisse-intl-reg
+    text-align: center
+    margin-top: 15px
+  &__list
+    width: 900px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 20px 0 0 20px
+    position: relative
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 70px
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 1630px
+      height: 530px
+      background: url("../img/prize/bg-decor.png") no-repeat 0 0/contain
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      top: -280px
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 1690px
+      height: 1920px
+      background: url("../img/dots-decor.png") repeat 50% 0/cover
+      animation: bgMove 1200s linear infinite
+  &__item
+    width: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 2
+    &-img
+      max-width: 150px
+    &-title
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 6px 7px 3px 10px
+      color: $magenta
+      width: 157px
+      font-size: 40px
+      line-height: 40px
+      font-family: $font-suisse-intl-bold
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+      border-radius: 18px
+      background: rgba(0, 0, 61, 0.60)
+      margin-top: -55px
+      box-shadow: 0px 0px 5px 5px rgba(255, 38, 126, 0.23), 0px -9px 4px 0px rgba(7, 7, 107, 0.67) inset
+      backdrop-filter: blur(1px)
+      border: 2px solid $magenta
+      text-transform: uppercase
+    &-text
+      color: $grey
+      font-size: 25px
+      font-family: $font-suisse-intl-bold
+      text-transform: uppercase
+      line-height: 25px
+      margin-top: 15px
+
+.info
+  width: 100%
+  padding: 400px 0 180px 0
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: flex-start
+  .container
+    position: relative
+  &__buble
+    position: absolute
+    opacity: 1
+    top: -370px
+    right: 0
+    &-title
+      background: url("../img/info/bubble.png") no-repeat 0 0/cover
+      background-size: 100% 100%
+      width: 1080px
+      height: 450px
+      color: $green-light
+      font-size: 39px
+      line-height: 39px
+      text-shadow: 0.33px 0px 0.659px rgba(0, 0, 0, 0.40)
+      font-family: $font-robotto-cond-semib
+      padding: 75px 90px 220px 170px
+      z-index: 1
+      position: relative
+      opacity: 0
+      transition: opacity .4s ease
+      @media screen and (max-width: 1050px)
+        background: url("../img/info/bubble-tab.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+      @media screen and (max-width: 600px)
+        background: url("../img/info/bubble-mob.png") no-repeat 0 0/cover
+        background-size: 100% 100%
+    &-pers
+      width: 1150px
+      height: 750px
+      background: url("../img/info/pers.png") no-repeat 0 0/contain
+      left: -440px
+      top: 180px
+      position: absolute
+      z-index: 0
+      opacity: 0
+      transition: opacity .4s ease
+      @media screen and (max-width: 1050px)
+        background: url("../img/info/pers-tab.png") no-repeat 0 0/contain
+        background-size: 100% 100%
+      @media screen and (max-width: 600px)
+        background: url("../img/info/pers-mob.png") no-repeat 0 0/contain
+        background-size: 100% 100%
+      //animation: scaleAnim 2s ease-in-out
+  &__title
+    max-width: 485px
+    font-family: $font-suisse-intl-semib
+    color: $grey
+    font-size: 32px
+    letter-spacing: .02em
+    line-height: 38px
+    margin-bottom: 55px
+    z-index: 1
+  &__text
+    max-width: 485px
+    display: flex
+    flex-direction: column
+    gap: 50px
+    &-item
+      color: $purple
+      font-size: 28px
+      line-height: 34px
+      font-family: $font-suisse-intl-med
+      letter-spacing: .02em
+      position: relative
+      padding-left: 30px
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        border: 4px solid $grey
+        background: transparent
+        border-radius: 50%
+        width: 17px
+        height: 17px
+        box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.50) inset
+        left: 0
+        top: 4px
+
+.card
+  width: 100%
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-bottom: 280px
+  background: url("../img/card/bg-desc.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 1050px)
+    background: url("../img/card/bg-tab.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 600px)
+      background: url("../img/card/bg-mob.png") no-repeat 50% 0/cover
+  &__title
+    position: absolute
+    //opacity: 0
+    top: 0
+    left: -240px
+    font-size: 48px
+    line-height: 48px
+    font-family: $font-suisse-intl-bold
+    color: $grey
+    max-width: 425px
+    background: rgba($dark-blue, .7)
+    border: 3px solid $purple
+    border-radius: 16px
+    padding: 36px 40px 48px 45px
+    box-shadow: 4px 4px 17px 0px rgba(73, 93, 238, 0.55)
+  &__phone
+    width: 585px
+    flex-shrink: 0
+    height: 780px
+    background: url("../img/card/phone-desc.png") no-repeat 0 0/contain
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: column
+    position: relative
+    margin-left: 100px
+    z-index: 1
+    @media screen and (max-width: 950px)
+      background: url("../img/card/phone-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 600px)
+      background: url("../img/card/phone-mob.png") no-repeat 0 0/contain
+    &-img-decor
+      content: ""
+      display: block
+      width: 430px
+      height: 224px
+      background: url("../img/card/card-decor.png") no-repeat 0 0/contain
+      position: absolute
+      right: 208px
+      top: 198px
+      z-index: 0
+      opacity: 0
+      transition: opacity .4s ease
+      @media screen and (max-width: 600px)
+        background: url("../img/card/card-mob-decor.png") no-repeat 0 0/contain
+      //animation: clipPathToLeft 1.5s ease-in-out
+    &-link-decor
+      content: ""
+      display: block
+      width: 300px
+      height: 193px
+      background: url("../img/card/qr-decor.png") no-repeat 0 0/contain
+      position: absolute
+      right: 250px
+      bottom: 138px
+      z-index: 0
+      opacity: 0
+      transition: opacity .4s ease
+      @media screen and (max-width: 950px)
+        background: url("../img/card/btn-tab-decor.png") no-repeat 0 0/contain
+      @media screen and (max-width: 600px)
+        background: url("../img/card/btn-mob-decor.png") no-repeat 0 0/contain
+    &-title
+      color: $purple
+      font-size: 18px
+      line-height: 25px
+      letter-spacing: .04em
+      text-transform: uppercase
+      font-family: $font-suisse-intl-bold
+      text-shadow: 1.753px 1.753px 10.08px rgba(20, 41, 169, 0.60)
+      max-width: 280px
+      text-align: center
+      transform: rotate(-3.986deg)
+      margin: 100px 0 0 115px
+    &-link
+      width: 196px
+      height: 196px
+      background: url("../img/card/qrcode.png") no-repeat 0 0/contain
+      margin: 15px 0 0 25px
+      position: relative
+      z-index: 1
+      transition: opacity .4s ease
+      opacity: 0
+      &-btn
+        display: none
+        @media screen and (max-width: 950px)
+          display: flex
+    &-img
+      max-width: 380px
+      min-width: 380px
+      margin: 40px 0px 0 -60px
+      opacity: 0
+      transition: opacity .2s ease
+      picture
+        position: relative
+        z-index: 1
+    &-bottom
+      color: $purple
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: .02em
+      transform: rotate(-4.202deg)
+      text-align: center
+      text-shadow: 1.753px 1.753px 10.08px rgba(20, 41, 169, 0.60)
+      font-family: $font-suisse-intl-semib
+      margin: 35px 0 0 155px
+      &.text-mob
+        display: none
+  &__pers
+    width: 905px
+    flex-shrink: 0
+    margin: 20px 0 0 -420px
+    z-index: 0
+    position: relative
+  &__bottom
+    position: absolute
+    bottom: -90px
+    left: 0
+    color: $grey
+    font-size: 24px
+    line-height: 28px
+    text-decoration: underline
+    text-align: center
+    font-family: $font-suisse-intl-reg
+
+
+
+
+.table
+  margin-top: -200px
+  z-index: 2
+  position: relative
+  &::before
+    content: ""
+    display: block
+    width: 1730px
+    height: 685px
+    background: url("../img/table/bg-decor.png") no-repeat 0 0/contain
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 50%)
+    z-index: 0
+    @media screen and (max-width: 950px)
+      background: url("../img/table/bg-decor-tab.png") no-repeat 0 0/contain
+  &__title
+    font-size: 48px
+    line-height: 48px
+    text-transform: uppercase
+    font-family: $font-suisse-intl-bold
+    text-shadow: 2px 2px 0px rgba(130, 17, 63, 0.50)
+    color: $grey
+    max-width: 670px
+    text-align: center
+  &__subtitle
+    color: $grey
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: .02em
+    font-family: $font-suisse-intl-reg
+    margin-top: 30px
+    text-align: center
+  &__container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    width: 100%
+    border-radius: 30px
+    border: 2px solid rgba(0, 104, 177, 0.40)
+    background: rgba(3, 74, 147, 0.20)
+    padding: 25px 50px
+    z-index: 1
+    position: relative
   &__wrap
     display: flex
+    flex-direction: column
     align-items: center
-  &__text
-    color: $white
-    font-family: $font-suisse-intl-reg
-    font-size: 14px
-    line-height: 22px
-    max-width: 975px
-    opacity: .8
-  &__licensed
+    width: 100%
+    margin-top: 30px
+    position: relative
+  &__head
+    width: 100%
     display: flex
     align-items: center
-    gap: 18px
-    margin: 0 35px 0 auto
-    flex-shrink: 0
-  &__btns
+    justify-content: center
+    border-radius: 18px
+    background: linear-gradient(180deg, rgba(17, 17, 131, 0.60) 0%, #011E60 27.78%, #021F60 32%, #062A7A 59.37%, #021F60 100%)
+    box-shadow: 0px -6px 15px 0px rgba(0, 0, 61, 0.30)
+    padding: 30px 40px
+    &-item
+      color: $grey
+      font-size: 16px
+      line-height: 19px
+      text-transform: uppercase
+      font-family: $font-suisse-intl-bold
+      max-width: 250px
+      width: 250px
+      text-align: center
+      &:nth-child(2), &:nth-child(3)
+        color: $magenta
+  &__body
+    width: 100%
+    max-height: 540px
+    overflow-y: auto
+    border-radius: 70px
+    border: 4px solid rgba(28, 73, 144, 0.40)
+    background: url("../img/table/table-body-bg.png") no-repeat 50% 50%/cover
+    margin-top: 30px
+    padding-top: 10px
+    scrollbar-width: auto
+    &::-webkit-scrollbar
+        background: transparent
+        width: 0
+        opacity: 0
+    &::-webkit-scrollbar-thumb
+        background: transparent
+        opacity: 0
+        width: 0
+    &-scroll
+      height: auto
+      padding: 0 20px
+      position: relative
+  &__row
     display: flex
     align-items: center
-  &__appstore
-    display: block
-    background: url("../img/appleBtn.png") no-repeat 0 0/contain
-    width: 114px
-    height: 38px
-  &__googlePlay
-    display: block
-    background: url("../img/googleBtn.svg") no-repeat 0 0/contain
-    width: 128px
-    height: 38px
-    margin-left: 10px
+    justify-content: center
+    width: 100%
+    &:not(:last-child)
+      border-bottom: 2px solid rgba(153, 210, 251, 0.20)
+    &-item
+      font-size: 24px
+      line-height: 24px
+      max-width: 250px
+      width: 250px
+      text-align: center
+      font-family: $font-suisse-intl-bold
+      color: $grey
+      text-transform: uppercase
+      padding: 20px 0
+      &:nth-child(2), &:nth-child(3)
+        color: $magenta
+      &:nth-child(3)
+        display: inline-block
+        width: fit-content
+        margin: 0 auto
+        background: rgba($blue, .7)
+        padding: 10px 12px
+        box-shadow: 0px 0px 5px 5px rgba(255, 38, 126, 0.23), 0px -9px 4px 0px rgba(7, 7, 107, 0.67) inset
+        backdrop-filter: blur(1px)
+        border: 2px solid $magenta
+        border-radius: 10px
 
-.legal
-  font-family: $font-legal
-  font-size: 4.7vw
-  padding: 0 15px
-  text-align: center
+
+  &__scrollbar
+    height: 100%
+    position: absolute
+    width: 17px
+    right: -30px
+    background: rgba($grey, .1)
+    border-radius: 20px
+    top: 150px
+    user-select: none
+    &-thumb
+      width: 25px
+      height: 86px
+      position: absolute
+      left: 50%
+      //top: 35%
+      transform: translate(-50%, 0)
+      border-radius: 4px
+      background: $green
+      box-shadow: 0px 0px 18.617px 0px $green
+  &__btn
+    margin-top: 25px
+
+
+.drop
+  max-width: 100%
+  margin: auto
+  width: 100%
+  padding: 20px 10px 0 10px
+  position: relative
+  z-index: 3
+  display: flex
+  flex-direction: column
+  align-items: center
+.dropdown
+  outline: none!important
+  cursor: pointer
+  position: relative
+  width: 100%
+  max-width: 1150px
+  z-index: 1
+  text-align: start
+  padding: 0 10px
+  summary::-webkit-details-marker
+    display: none
+  > summary
+    list-style: none
+  summary
+    padding: 22px 63px 20px 20px
+    font-family: $font-robotto-cond-semib
+    font-size: 20px
+    line-height: 30px
+    width: 100%
+    outline: none!important
+    border: 1px solid rgba($white, .2)
+    position: relative
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    user-select: none
+    background: linear-gradient(137deg, rgba($white, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%)
+    box-shadow: 0 1px 2px 0 rgba($white, 0.10) inset
+    backdrop-filter: blur(10px)
+    border-radius: 20px
+    color: $white
+    ::-webkit-details-marker
+      display: none
+    &:after
+      content: ''
+      background: url("../img/drop-arrow.png") no-repeat 0 0/contain
+      display: inline-block
+      width: 33px
+      height: 20px
+      position: absolute
+      right: 26px
+      top: 50%
+      transform: translate(0, -50%)
+  &[open]
+    summary
+      &:after
+        transform: rotate(180deg) translate(0, 50%)
+        //opacity: .6
+  .drop-txt
+    margin-top: 25px
+    overflow-wrap: break-word
+    padding: 30px 43px 28px 25px
+    text-align: start
+    cursor: auto
+    background: linear-gradient(137deg, rgba($white, 0.1) 0%, rgba($white, 0.05) 100%)
+    border-radius: 20px
+    backdrop-filter: blur(10px)
+    border: 1px solid rgba($white, .2)
+    &-list
+      max-height: 500px
+      overflow-y: scroll
+      padding-right: 20px
+      scrollbar-width: auto
+      &::-webkit-scrollbar
+        background: rgba($white, .3)
+        width: 3px
+        border-radius: 50px
+      &::-webkit-scrollbar-thumb
+        position: relative
+        border-radius: 50px
+        background: $green
+    .list-num
+      min-width: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: $font-suisse-intl-bold
+      color: $green
+      height: 50px
+      border-radius: 12px
+      border: 3px solid $green
+      font-size: 32px
+      letter-spacing: .02em
+      text-shadow: 0px 0px 9px #15A683
+      line-height: 28px
+      margin-right: 30px
+    .list-box
+      min-width: 50px
+      max-width: 50px
+      height: 50px
+      background: url("../img/drop-box.png") no-repeat 0 0/contain
+      margin-right: 30px
+      margin-bottom: -50px
+    .drop__list
+      &-item
+        padding-left: 80px
+        font-family: $font-suisse-intl-reg
+        color: $grey
+        font-size: 24px
+        line-height: 28px
+        display: flex
+        &:not(:last-child)
+          margin-bottom: 10px
+        .magenta
+          color: $magenta
+          font-family: inherit
+          margin-left: .3em
+    p, h2, h3, h4, h5, h6, strong, span
+      margin-bottom: 20px
+      font-family: $font-suisse-intl-reg
+      font-size: 24px
+      line-height: 28px
+      color: $grey
+      display: flex
+      align-items: flex-start
+      &:last-child
+        margin-bottom: 0
+      a
+        color: $green
+        text-decoration: underline
+        font-family: $font-suisse-intl-reg
+        position: relative
+        &:hover
+          text-decoration: none
+    strong
+      margin-bottom: 10px
+      font-size: 16px
+      font-family: $font-suisse-intl-reg
+      color: $white
+      display: block
+    .retreat1
+      padding-left: 20px
+    .retreat2
+      padding-left: 30px
+    .circle
+      padding-left: 20px
+      &:before
+        content: ''
+        width: 4px
+        height: 4px
+        background: $white
+        border-radius: 50%
+        display: inline-block
+        margin: 0 5px 2px 0
+
+@keyframes clipPathToLeft
+  0%
+    opacity: 0
+  49%
+    opacity: 0
+  50%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+    opacity: 1
+  100%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+    opacity: 1
+
+@keyframes phoneCardAnim
+  0%
+    opacity: 0
+    transform: rotate(-4deg) translate(130px, 10px) scale(.7)
+  40%
+    opacity: 1
+  100%
+    opacity: 1
+    transform: rotate(0deg) translate(0, 0)
+
+
+
+@media screen and (max-width: 600px)
+  @keyframes phoneCardAnim
+    0%
+      opacity: 0
+      transform: rotate(2.585deg) translate(130px, 10px) scale(.7)
+    40%
+      opacity: 1
+    100%
+      opacity: 1
+      transform: rotate(11.585deg)  translate(0, 0)
+
+@keyframes phoneLinkAnim
+  0%
+    opacity: 0
+    transform: rotate(-4deg) translate(130px, 10px) scale(.7)
+  40%
+    opacity: 1
+  100%
+    opacity: 1
+    transform: rotate(0deg) translate(0, 0)
+
+
+@keyframes bgMove
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -10000%
+
+@keyframes scaleAnim
+  0%
+    transform: scale(0)
+    opacity: 0
+  100%
+    transform: scale(1)
+    opacity: 1
+
+@keyframes scaleAnimSmall
+  0%
+    transform: scale(0)
+    opacity: 0
+  100%
+    transform: scale(.85)
+    opacity: 1
+
+.phoneCardAnim
+  animation: phoneCardAnim 1.5s ease-in-out
+  opacity: 1
+
+.phoneLinkAnim
+  animation: phoneCardAnim 1.5s ease-in-out
+  opacity: 1
+  @media screen and (max-width: 600px)
+    animation: phoneLinkAnim 1.5s ease-in-out
+
+.phoneDecorAnim
+  animation: clipPathToLeft 1.5s ease-in-out
+  opacity: 1
+
+.scaleAnim
+  animation: scaleAnim 1.5s ease-in-out
+  opacity: 1
