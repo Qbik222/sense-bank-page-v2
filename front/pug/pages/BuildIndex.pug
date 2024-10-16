@@ -2,17 +2,17 @@
     .promo
         .container
             .promo__left
-                .promo__title Грай, <br> як #[span.magenta профі]
-                .promo__subtitle З карткою карткою "Profiplay" та фріспінами від FAVBET
+                .promo__title(data-translate="promoTitle") Грай, <br> як #[span.magenta профі]
+                .promo__subtitle(data-translate="promoSubtitle") З карткою карткою "Profiplay" та фріспінами від FAVBET
                 .promo__card
                     picture
                         source(srcset="./img/promo/card-mob.png" media="(max-width: 600px)")
                         source(srcset="./img/promo/card-tab.png" media="(max-width: 1050px)")
                         img(src="./img/promo/card-desc.png" alt="profiplay")
-                a(href="/personal-office/balance/deposit/").promo__btn.btn ЗРОБИТИ ДЕПОЗИТ
+                a(href="/personal-office/balance/deposit/").promo__btn.btn(data-translate="mainBtn") ЗРОБИТИ ДЕПОЗИТ
                 .promo__bottom
-                    span.promo__bottom-item Загальний період проведення акції — з  21.10.2024 по 15.12.2024.
-                    span.promo__bottom-item Загальний призовий фонд акції, вид та розмір бонусної пропозиції встановлюється виключно на розсуд Організатора
+                    span.promo__bottom-item(data-translate="promoBottomTitle") Загальний період проведення акції — з  21.10.2024 по 15.12.2024.
+                    span.promo__bottom-item(data-translate="promoBottomText") Загальний призовий фонд акції, вид та розмір бонусної пропозиції встановлюється виключно на розсуд Організатора
             .promo__right
                 .promo__pers
                     picture
@@ -24,34 +24,34 @@
                         img(src="./img/promo/bike-desc.png" alt="profiplay")
     .guide
         .container
-            .guide__title Як отримати бонус у вигляді  #[span.magenta фріспінів?]
+            .guide__title(data-translate="guideTitle") Як отримати бонус у вигляді  #[span.magenta фріспінів?]
             .guide__list
                 .guide__item
                     .guide__item-num 1
-                    .guide__item-text #[span.green-txt РОБИ] депозит від 150₴ з платіжної картки #[strong «Profiplay»]
+                    .guide__item-text(data-translate="guideItemText1") #[span.green-txt РОБИ] депозит від 150₴ з платіжної картки #[strong «Profiplay»]
                 .guide__item
                     .guide__item-num 2
-                    .guide__item-text Щотижня #[span.green-txt Отримуй] шанс на бонус у вигляді фріспінів: від 50 FS до 150 FS, залежно від суми здійсненого депозиту.
+                    .guide__item-text(data-translate="guideItemText2") Щотижня #[span.green-txt Отримуй] шанс на бонус у вигляді фріспінів: від 50 FS до 150 FS, залежно від суми здійсненого депозиту.
     .prize
         .container
-            .prize__title призи
-            .prize__subtitle Бонус залежить від суми твого найбільшого депозиту впродовж тижня.
+            .prize__title(data-translate="prizeTitle") призи
+            .prize__subtitle(data-translate="prizeSubtitle") Бонус залежить від суми твого найбільшого депозиту впродовж тижня.
             .prize__list
                 .prize__item
                     .prize__item-img
                         img(src="./img/prize/prize1.png" alt="prize box")
-                    .prize__item-title 50 fs
-                    .prize__item-text ₴150 - ₴249
+                    .prize__item-title(data-translate="prizeItemTitle1") 50 fs
+                    .prize__item-text(data-translate="prizeItemText1") ₴150 - ₴249
                 .prize__item
                     .prize__item-img
                         img(src="./img/prize/prize2.png" alt="prize box")
-                    .prize__item-title 100 fs
-                    .prize__item-text ₴250 - ₴599
+                    .prize__item-title(data-translate="prizeItemTitle2") 100 fs
+                    .prize__item-text(data-translate="prizeItemText2") ₴250 - ₴599
                 .prize__item
                     .prize__item-img
                         img(src="./img/prize/prize3.png" alt="prize box")
-                    .prize__item-title 150 fs
-                    .prize__item-text ₴600 та більше
+                    .prize__item-title(data-translate="prizeItemTitle3") 150 fs
+                    .prize__item-text(data-translate="prizeItemText3") ₴600 та більше
             details.dropdown
                 summary(data-translate="prizeDropBtn") розподіл призів
                 .drop-txt
@@ -67,36 +67,36 @@
     .info
         .container
             .info__buble
-                .info__buble-title Граю-вітаю. Коли ти у грі, усе має бути ідеально, навіть платіжна карта. <br> Завантажуй карту "Profiplay".
+                .info__buble-title(data-translate="infoBuble") Граю-вітаю. Коли ти у грі, усе має бути ідеально, навіть платіжна карта. <br> Завантажуй карту "Profiplay".
                 .info__buble-pers
-            .info__title Profiplay - унікальнка картка, що повертає 3% кешбеку від цифрових розваг
+            .info__title(data-translate="infoTitle") Profiplay - унікальнка картка, що повертає 3% кешбеку від цифрових розваг
             .info__text
-                .info__text-item Безкоштовні перекази на картки інших банків до_20_000 гривень на місяць.
-                .info__text-item Зняття коштів без комісії в будь-якому банкоматі світу та багато іншого.
+                .info__text-item(data-translate="infoText1") Безкоштовні перекази на картки інших банків до_20_000 гривень на місяць.
+                .info__text-item(data-translate="infoText2") Зняття коштів без комісії в будь-якому банкоматі світу та багато іншого.
     .card
         .container
             .card__phone
-                .card__phone-title Отримай карту в мобільному застосунку
+                .card__phone-title(data-translate="phoneTitle") Отримай карту в мобільному застосунку
                 .card__phone-img-decor
                 .card__phone-link-decor
                 .card__phone-img
                     picture
                         source(srcset="./img/card/card-mob.png" media="(max-width: 600px)")
                         img(src="./img/card/card-desc.png" alt="profiplay")
-                a(href="https://hi.sensebank.com.ua/atgQRTqgegSm8yiB7" target="_blank").card__phone-link #[span.card__phone-link-btn За картою]
-                .card__phone-bottom Скануй та оформлюй картку
-                .card__phone-bottom.text-mob Натискай кнопку та <br> оформлюй картку
-                a(href="https://sensebank.ua/packages/profiplay" target="_blank").card__bottom Дізнайся більше <br> про карту Profiplay
+                a(href="https://hi.sensebank.com.ua/atgQRTqgegSm8yiB7" target="_blank").card__phone-link #[span.card__phone-link-btn(data-translate="phoneBtn") За картою]
+                .card__phone-bottom(data-translate="phoneBottom") Скануй та оформлюй картку
+                .card__phone-bottom.text-mob(data-translate="phoneBottomMob") Натискай кнопку та <br> оформлюй картку
+                a(href="https://sensebank.ua/packages/profiplay" target="_blank" data-translate="cardBottomLink").card__bottom Дізнайся більше <br> про карту Profiplay
             .card__pers
-                .card__title Нема картки #[span.magenta Profiplay?]
+                .card__title(data-translate="cardTitle") Нема картки #[span.magenta Profiplay?]
                 picture
                     source(srcset="./img/card/pers-mob.png" media="(max-width: 600px)")
                     source(srcset="./img/card/pers-tab.png" media="(max-width: 1050px)")
                     img(src="./img/card/pers-desc.png" alt="profiplay")
     .table
         .table__container.container
-            .table__title Таблиця результатів #[span.magenta “Фріспіни за депозит”]
-            .table__subtitle Нарахування здійснюються щосереди за минулий тиждень
+            .table__title(data-translate="tableTitle") Таблиця результатів #[span.magenta “Фріспіни за депозит”]
+            .table__subtitle(data-translate="tableSubtitle") Нарахування здійснюються щосереди за минулий тиждень
             .table__wrap
                 .table__scrollbar
                     .table__scrollbar-thumb
@@ -185,7 +185,7 @@
                             .table__row-item 150 ₴ - 250₴
                             .table__row-item 2250
                             .table__row-item 23.11.2024
-            a(href="/personal-office/balance/deposit/").table__btn.btn зробити депозит
+            a(href="/personal-office/balance/deposit/").table__btn.btn(data-translate="mainBtn") зробити депозит
     .drop
         .container
             details.dropdown
