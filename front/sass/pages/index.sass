@@ -928,3 +928,63 @@ body
 .scaleAnim
   animation: scaleAnim 1.5s ease-in-out
   opacity: 1
+
+// en styles
+
+.fav-page.en
+  .card
+    &__phone
+      &-title
+        @media screen and (max-width: 600px)
+          margin: 90px 0 -10px 102px
+          max-width: 175px
+      &-link
+        &-btn
+          @media screen and (max-width: 1050px)
+            padding: 25px 109px 24px 109px
+          @media screen and (max-width: 600px)
+            padding: 12px 52px 11px 52px
+            font-size: 15px
+      &-bottom
+        margin: 25px 0 0 215px
+        @media screen and (max-width: 1050px)
+          &.text-mob
+            margin: 40px 0 0 210px
+        @media screen and (max-width: 950px)
+          &.text-mob
+            margin: 50px 0 0 95px
+    &__title
+      padding: 33px 40px 32px 45px
+      top: -30px
+      @media screen and (max-width: 1050px)
+        top: -55px
+      @media screen and (max-width: 600px)
+        top: auto
+        padding: 20px
+
+    @media screen and (max-width: 1050px)
+      margin-top: -20px
+  .info
+    &__title
+      @media screen and (max-width: 1050px)
+        max-width: 275px
+    &__buble
+      &-title
+        @media screen and (max-width: 1050px)
+          padding: 43px 30px 135px 95px
+        @media screen and (max-width: 600px)
+          padding: 42px 50px 120px 59px
+          width: 415px
+          height: 315px
+  .table
+    &__title
+      max-width: 790px
+    &__head
+      &-item
+        &:nth-child(2)
+          min-width: 97px
+          @media screen and (max-width: 370px)
+            min-width: 92px
+
+
+
